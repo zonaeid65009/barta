@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Islamic Anonymous Messenger</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@400;600;800&family=Amiri:ital@0;1&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Anek Bangla', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* গভীর সবুজ ও রাতের আকাশের মিশ্রণ */
+            background: linear-gradient(135deg, #022c22, #064e3b, #0f172a, #020617);
+            background-size: 400% 400%;
+            animation: bgAnimation 15s ease infinite;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        @keyframes bgAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* চাঁদ ও তারার ব্যাকগ্রাউন্ড ইফেক্ট */
+        .stars {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: radial-gradient(#ffffff 1px, transparent 1px);
+            background-size: 50px 50px;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        /* গম্বুজ/মেহরাব আকৃতির মূল কন্টেইনার */
+        .arch-container {
+            position: relative;
+            z-index: 10;
+            /* Glassmorphism */
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            /* গম্বুজ আকৃতি */
+            border-radius: 180px 180px 24px 24px;
+            border: 2px solid rgba(212, 175, 55, 0.3); /* সোনালী বর্ডার */
+            border-bottom: 5px solid #d4af37;
+            padding: 40px 30px 30px 30px;
+            width: 100%;
+            max-width: 420px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(212, 175, 55, 0.1);
+            text-align: center;
+        }
+
+        /* ইসলামিক প্রোফাইল আইকন */
+        .avatar-wrapper {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 15px auto;
+            background: linear-gradient(45deg, #d4af37, #fdf08a);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 45px;
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+            border: 4px solid #064e3b;
+        }
+
+        .greeting {
+            font-family: 'Amiri', serif;
+            color: #d4af37; /* সোনালী রঙ */
+            font-size: 28px;
+            margin-bottom: 5px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .sub-text {
+            color: #e2e8f0;
+            font-size: 15px;
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+
+        /* ইনপুট এবং মেসেজ বক্স এর স্টাইল */
+        .input-group {
+            position: relative;
+            margin-bottom: 15px;
+        }
+
+        input[type="text"], textarea {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            border-radius: 12px;
+            padding: 15px 20px;
+            font-size: 16px;
+            font-family: 'Anek Bangla', sans-serif;
+            color: #f8fafc;
+            outline: none;
+            transition: all 0.3s;
+            box-shadow: inset 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        textarea {
+            height: 140px;
+            resize: none;
+            border-radius: 16px;
+        }
+
+        input[type="text"]::placeholder, textarea::placeholder {
+            color: rgba(248, 250, 252, 0.5);
+        }
+
+        input[type="text"]:focus, textarea:focus {
+            border-color: #d4af37;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.2), inset 0 4px 10px rgba(0,0,0,0.3);
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        /* বাটন ডিজাইন */
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+
+        button {
+            font-family: 'Anek Bangla', sans-serif;
+            border: none;
+            border-radius: 12px;
+            padding: 14px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-ai {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.1);
+            color: #d4af37;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-ai:hover {
+            background: rgba(212, 175, 55, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .btn-send {
+            flex: 2;
+            background: linear-gradient(135deg, #d4af37, #b8860b);
+            color: #111;
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-send:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 25px rgba(212, 175, 55, 0.4);
+        }
+        
+        .btn-send:disabled {
+            background: #555;
+            color: #888;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        /* সুন্দর একটি ইসলামিক ডিভাইডার */
+        .divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+            color: rgba(212, 175, 55, 0.5);
+        }
+        .divider::before, .divider::after {
+            content: "";
+            height: 1px;
+            width: 50px;
+            background: rgba(212, 175, 55, 0.3);
+        }
+
+        /* ফুটার টেক্সট */
+        .footer-text {
+            color: #cbd5e1;
+            font-size: 13px;
+            opacity: 0.8;
+        }
+
+        /* নোটিফিকেশন টোস্ট */
+        .toast {
+            position: fixed;
+            bottom: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #064e3b;
+            color: #fff;
+            padding: 15px 30px;
+            border-radius: 50px;
+            border: 1px solid #d4af37;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            font-weight: 600;
+            transition: bottom 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: max-content;
+        }
+
+        .toast.show {
+            bottom: 40px;
+        }
+
+        .toast.error {
+            background: #7f1d1d;
+            border-color: #ef4444;
+        }
+
+        /* ডেকোরেশন */
+        .decoration-lantern {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
+            animation: swing 3s ease-in-out infinite alternate;
+            transform-origin: top center;
+        }
+
+        @keyframes swing {
+            0% { transform: rotate(-10deg); }
+            100% { transform: rotate(10deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="stars"></div>
+
+    <div class="arch-container">
+        <div class="decoration-lantern">🏮</div>
+
+        <!-- প্রোফাইল অংশ -->
+        <div class="avatar-wrapper">🕋</div>
+        <h1 class="greeting">السَّلَامُ عَلَيْكُمْ</h1>
+        <p class="sub-text">"আপনার মূল্যবান পরামর্শ, দোয়া বা বার্তা আমাকে পাঠান। আপনি চাইলে আপনার পরিচয় গোপন রাখতে পারেন।"</p>
+
+        <!-- পরিচয় (নাম) লেখার বক্স (ঐচ্ছিক) -->
+        <div class="input-group">
+            <input type="text" id="senderName" placeholder="আপনার নাম বা পরিচয় (ঐচ্ছিক)...">
+        </div>
+
+        <!-- মেসেজ বক্স -->
+        <div class="input-group">
+            <textarea id="messageBox" placeholder="এখানে আপনার বার্তা লিখুন... "></textarea>
+        </div>
+
+        <!-- বাটনসমূহ -->
+        <div class="btn-group">
+            <button class="btn-ai" onclick="generateIslamicText()">✨ ইসলামিক বার্তা</button>
+            <button class="btn-send" id="sendBtn" onclick="sendMessage()">🕊️ বার্তা পাঠান</button>
+        </div>
+
+        <div class="divider">✧</div>
+
+        <!-- ফুটার -->
+        <p class="footer-text">"মুমিনরা তো পরস্পর ভাই ভাই।" <br> (সূরা হুজুরাত: ১০)</p>
+    </div>
+
+    <!-- নোটিফিকেশন -->
+    <div class="toast" id="toast">
+        ✅ আলহামদুলিল্লাহ! বার্তাটি পাঠানো হয়েছে।
+    </div>
+
+    <script>
+        // ইসলামিক AI মেসেজ জেনারেটর
+        function generateIslamicText() {
+            const textBox = document.getElementById('messageBox');
+            const islamicTexts = [
+                "নিশ্চয়ই কষ্টের সাথেই রয়েছে স্বস্তি। (সূরা ইনশিরাহ)\nআল্লাহ আপনার মঙ্গল করুন।",
+                "আল্লাহ সর্বদা ধৈর্যশীলদের সাথে আছেন। হতাশ হবেন না, এগিয়ে যান!",
+                "আপনার জন্য অনেক অনেক দোয়া ও শুভকামনা রইলো। আল্লাহ আপনাকে উত্তম প্রতিদান দিন।",
+                "আপনার আচরণ সত্যিই খুব সুন্দর। আল্লাহ আপনাকে আরও হেদায়েত দান করুন।",
+                "যেকোনো পরিস্থিতিতে আলহামদুলিল্লাহ বলতে শিখুন, শান্তি পাবেন। শুভকামনা!",
+                "সালাত কায়েম করুন, এটিই সফলতার মূল চাবিকাঠি।"
+            ];
+            
+            // সুন্দর ফেড ইফেক্টের জন্য
+            textBox.style.opacity = '0';
+            setTimeout(() => {
+                const randomText = islamicTexts[Math.floor(Math.random() * islamicTexts.length)];
+                textBox.value = randomText;
+                textBox.style.opacity = '1';
+            }, 200);
+        }
+
+        // ফর্মসপ্রি এর মাধ্যমে মেসেজ পাঠানো
+        async function sendMessage() {
+            const nameBox = document.getElementById('senderName');
+            const textBox = document.getElementById('messageBox');
+            const toast = document.getElementById('toast');
+            const sendBtn = document.getElementById('sendBtn');
+            
+            const message = textBox.value.trim();
+            // যদি কেউ নাম না লেখে তবে ডিফল্ট হিসেবে "বেনামী (Anonymous)" যাবে
+            const senderIdentity = nameBox.value.trim() !== "" ? nameBox.value.trim() : "বেনামী (Anonymous)";
+
+            if(message === "") {
+                alert("দয়া করে মূল বার্তার ঘরে কিছু লিখুন!");
+                return;
+            }
+
+            // বাটনের অবস্থা পরিবর্তন
+            const originalBtnText = sendBtn.innerHTML;
+            sendBtn.innerHTML = "⏳ পাঠানো হচ্ছে...";
+            sendBtn.disabled = true;
+
+            // ==========================================
+            // নিচে আপনার Formspree URL টি বসাবেন 👇
+            // ==========================================
+            const formspreeURL = "https://formspree.io/f/xojnyell"; 
+            
+            try {
+                const response = await fetch(formspreeURL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        "প্রেরকের_নাম": senderIdentity,
+                        "মূল_বার্তা": message,
+                        "_subject": `নতুন বার্তা এসেছে: ${senderIdentity} এর কাছ থেকে 🕊️`
+                    })
+                });
+
+                if (response.ok) {
+                    toast.innerHTML = "✅ আলহামদুলিল্লাহ! বার্তাটি পাঠানো হয়েছে।";
+                    toast.classList.remove('error');
+                    toast.classList.add('show');
+                    
+                    // মেসেজ যাওয়ার পর বক্সগুলো খালি করে দেওয়া
+                    textBox.value = ""; 
+                    nameBox.value = ""; 
+                } else {
+                    toast.innerHTML = "❌ বার্তা পাঠানো যায়নি। URL চেক করুন!";
+                    toast.classList.add('error', 'show');
+                }
+            } catch (error) {
+                toast.innerHTML = "❌ ইন্টারনেট সমস্যা! আবার চেষ্টা করুন।";
+                toast.classList.add('error', 'show');
+            } finally {
+                sendBtn.innerHTML = originalBtnText;
+                sendBtn.disabled = false;
+
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 3500);
+            }
+        }
+    </script>
+</body>
+</html>
