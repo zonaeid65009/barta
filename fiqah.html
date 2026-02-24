@@ -1,0 +1,2164 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>উসূলুল ফিকহ: আহলিয়াত ও হুকুম (PDF পৃষ্ঠা ১৫-২১)</title>
+    <style>
+        :root {
+            --bg: #f9fafb;
+            --text: #1f2937;
+            --accent: #0ea5a4;
+            --accent-light: #e0f7f6;
+            --border: #e5e7eb;
+            --white: #ffffff;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --header-height: 70px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Hind Siliguri', sans-serif;
+            line-height: 1.6;
+            padding-top: var(--header-height);
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            color: var(--text);
+            font-weight: 700;
+        }
+
+        .arabic {
+            font-family: 'Amiri', serif;
+            direction: rtl;
+            font-size: 1.2em;
+            line-height: 1.8;
+        }
+
+        .highlight-text {
+            background-color: #fde68a;
+            border-radius: 2px;
+        }
+
+        /* Header Structure */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: var(--header-height);
+            background: var(--white);
+            box-shadow: var(--shadow);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .header-left {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .site-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--accent);
+        }
+
+        .subtitle {
+            font-size: 0.8rem;
+            color: #6b7280;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        /* Search Bar */
+        #search-container {
+            position: relative;
+        }
+
+        #search-input {
+            padding: 8px 12px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            outline: none;
+            font-size: 0.9rem;
+            width: 200px;
+            transition: border-color 0.2s;
+        }
+
+        #search-input:focus {
+            border-color: var(--accent);
+        }
+
+        /* Navigation */
+        .btn {
+            padding: 8px 16px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            opacity: 0.9;
+        }
+
+        .menu-container {
+            position: relative;
+        }
+
+        .menu-btn {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            width: 220px;
+            display: none;
+            flex-direction: column;
+            padding: 10px 0;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .dropdown-menu.active {
+            display: flex;
+        }
+
+        .dropdown-item {
+            padding: 10px 15px;
+            text-decoration: none;
+            color: var(--text);
+            font-size: 0.9rem;
+            transition: background 0.1s;
+        }
+
+        .dropdown-item:hover {
+            background: var(--bg);
+            color: var(--accent);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1100px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--accent-light);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .page-tag {
+            background: var(--accent-light);
+            color: var(--accent);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        /* Terminology Box */
+        .term-box {
+            background: #f8fafc;
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .term-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--accent);
+            margin-bottom: 5px;
+        }
+
+        .term-def-arabic {
+            font-size: 1.1rem;
+            color: #4b5563;
+            margin-bottom: 8px;
+        }
+
+        .term-def-bangla {
+            font-size: 1rem;
+            color: var(--text);
+        }
+
+        /* Word by Word Tooltip */
+        .word {
+            position: relative;
+            cursor: help;
+            border-bottom: 1px dotted var(--accent);
+            transition: background 0.2s;
+        }
+
+        .word:hover {
+            background-color: var(--accent-light);
+        }
+
+        .tooltip-box {
+            position: absolute;
+            background: #333;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+            display: none;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .word:hover .tooltip-box {
+            display: block;
+        }
+
+        /* Tree Diagram System */
+        .tree-container {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+            overflow-x: auto;
+        }
+
+        .tree-node {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            padding: 0 10px;
+        }
+
+        .node-content {
+            background: var(--white);
+            border: 1px solid var(--accent);
+            padding: 10px 15px;
+            border-radius: 6px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            min-width: 120px;
+            font-weight: bold;
+        }
+
+        .node-content.root {
+            background: var(--accent);
+            color: white;
+        }
+
+        .tree-children {
+            display: flex;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .tree-children::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            width: 2px;
+            height: 20px;
+            background: var(--accent);
+        }
+
+        .tree-node::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            width: 2px;
+            height: 20px;
+            background: var(--accent);
+        }
+        
+        /* Specific Fix for Tree Lines */
+        .tree-children .tree-node:first-child::before {
+             display: none; /* Handled by connector below */
+        }
+        
+        .connector-line {
+            position: absolute;
+            top: -20px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--accent);
+            z-index: -1;
+        }
+
+        /* Hukm Design */
+        .hukm-box {
+            background: var(--white);
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .hukm-header {
+            background: var(--bg);
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            font-weight: bold;
+            text-align: center;
+            color: var(--accent);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-right {
+                gap: 5px;
+            }
+            #search-input {
+                width: 120px;
+            }
+            .tree-children {
+                flex-direction: column;
+                align-items: center;
+            }
+            .tree-children::before {
+                display: none;
+            }
+            .tree-node {
+                margin-top: 10px;
+                width: 100%;
+            }
+            .tree-node::before {
+                display: none; /* Simplify mobile tree */
+            }
+            .node-content {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="header-left">
+        <div class="site-title">উসূলুল ফিকহ</div>
+        <div class="subtitle">আহলিয়াত ও আহকাম (পৃষ্ঠা ১৫-২১)</div>
+    </div>
+    
+    <div class="header-right">
+        <div id="search-container">
+            <input type="text" id="search-input" placeholder="অনুসন্ধান করুন...">
+        </div>
+        <button class="btn btn-primary" id="add-section-btn">+ Add Section</button>
+        <div class="menu-container">
+            <button class="menu-btn" onclick="toggleMenu()">⋮</button>
+            <div class="dropdown-menu" id="nav-menu">
+                <!-- JS will populate this -->
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container" id="main-content">
+
+    <!-- Page 15: Conditions of Taklif -->
+    <section id="section-15">
+        <div class="section-header">
+            <h2>তাকলিফ বা আইনি দায়বদ্ধতার শর্তাবলী</h2>
+            <span class="page-tag">📄 Page 15</span>
+        </div>
+
+        <div class="term-box">
+            <div class="term-title arabic">أَهْلِيَّةُ التَّكْلِيفِ</div>
+            <div class="term-def-arabic arabic">هي صلاحية الإنسان لوجوب الحقوق عليه ووجوبها له.</div>
+            <div class="term-def-bangla">আইনি দায়বদ্ধতার যোগ্যতা: মানুষের এমন যোগ্যতা যার মাধ্যমে তার ওপর অধিকার বর্তায় এবং সে অধিকার লাভ করে।</div>
+        </div>
+
+        <p>
+            মুকাল্লাফ (আইনি দায়বদ্ধ ব্যক্তি) হওয়ার জন্য প্রধান শর্তসমূহ হলো:
+            <br>
+            <span class="word arabic" data-meaning="জ্ঞান/বুদ্ধি">الْعَقْلُ</span> (জ্ঞান) এবং 
+            <span class="word arabic" data-meaning="বয়সপ্রাপ্তি">الْبُلُوغُ</span> (বয়সপ্রাপ্তি)।
+        </p>
+        <p>কারণ শরীয়তের বিধান পালনের জন্য বিধানের অর্থ বোঝা আবশ্যক।</p>
+        
+        <h3>তাকলিফের অপরিহার্য উপাদান:</h3>
+        <ul>
+            <li><strong>১. ইলম (علم):</strong> মুকাল্লাফকে অবশ্যই বুঝতে হবে যে তাকে কী আদেশ বা নিষেধ করা হয়েছে।</li>
+            <li><strong>২. কুদরত (قدرة):</strong> কাজটি করার বা বর্জন করার ক্ষমতা থাকা আবশ্যক। অসম্ভব কোনো কাজের নির্দেশ আল্লাহ দেন না।</li>
+        </ul>
+    </section>
+
+    <!-- Page 16: Mawani (Impediments) -->
+    <section id="section-16">
+        <div class="section-header">
+            <h2>মাওয়ানি' আল-তাকলিফ (দায়বদ্ধতার প্রতিবন্ধকসমূহ)</h2>
+            <span class="page-tag">📄 Page 16</span>
+        </div>
+
+        <div class="term-box">
+             <div class="term-title arabic">عَوَارِضُ الْأَهْلِيَّةِ</div>
+             <div class="term-def-bangla">যোগ্যতার প্রতিবন্ধক: এমন কিছু অবস্থা যা মানুষের যোগ্যতাকে প্রভাবিত করে, হয়তো তা পুরোপুরি বাতিল করে দেয় অথবা কিছুটা কমিয়ে দেয়।</div>
+        </div>
+
+        <div class="tree-container">
+            <div class="tree-node">
+                <div class="node-content root">عَوَارِضُ الْأَهْلِيَّةِ <br> (প্রতিবন্ধকসমূহ)</div>
+                <div class="tree-children">
+                    <!-- Branch 1 -->
+                    <div class="tree-node">
+                        <div class="node-content">سَمَاوِيَّةٌ <br> (আসমানী/অনিচ্ছাকৃত)</div>
+                        <div class="tree-children">
+                            <div class="tree-node"><div class="node-content">الْجُنُونُ (পাগলামি)</div></div>
+                            <div class="tree-node"><div class="node-content">الْعَتَهُ (বুদ্ধিবৈকল্য)</div></div>
+                            <div class="tree-node"><div class="node-content">النِّسْيَانُ (বিস্মৃতি)</div></div>
+                            <div class="tree-node"><div class="node-content">الْمَوْتُ (মৃত্যু)</div></div>
+                        </div>
+                    </div>
+                    <!-- Branch 2 -->
+                    <div class="tree-node">
+                        <div class="node-content">مُكْتَسَبَةٌ <br> (অর্জিত/ইচ্ছাকৃত)</div>
+                        <div class="tree-children">
+                             <div class="tree-node"><div class="node-content">الْجَهْلُ (অজ্ঞতা)</div></div>
+                             <div class="tree-node"><div class="node-content">السُّكْرُ (মাতালতা)</div></div>
+                             <div class="tree-node"><div class="node-content">السَّفَرُ (ভ্রমণ)</div></div>
+                             <div class="tree-node"><div class="node-content">الْإِكْرَاهُ (জবরদস্তি)</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3>অর্জিত প্রতিবন্ধকসমূহের তালিকা (Page 16):</h3>
+        <ul>
+            <li><span class="word arabic" data-meaning="মদ্যপান জনিত মাতালতা">السُّكْرُ</span> - জ্ঞান লোপ পাওয়া।</li>
+            <li><span class="word arabic" data-meaning="বোকামি/সম্পদ নষ্ট করা">السَّفَهُ</span> - বুদ্ধির অভাব এবং অর্থের অপচয়।</li>
+            <li><span class="word arabic" data-meaning="অজ্ঞতা">الْجَهْلُ</span> - বিধান সম্পর্কে না জানা।</li>
+            <li><span class="word arabic" data-meaning="ঠাট্টা-বিদ্রূপ">الْهَزْلُ</span> - ইচ্ছাকৃতভাবে সঠিক অর্থ না বুঝিয়ে কথা বলা।</li>
+            <li><span class="word arabic" data-meaning="ভুল">الْخَطَأُ</span> - অনিচ্ছাকৃতভাবে কিছু করা।</li>
+        </ul>
+    </section>
+
+    <!-- Page 17: Effects of Impediments -->
+    <section id="section-17">
+        <div class="section-header">
+            <h2>প্রতিবন্ধকসমূহের প্রভাব</h2>
+            <span class="page-tag">📄 Page 17</span>
+        </div>
+        
+        <p>আসমানী বা প্রাকৃতিক প্রতিবন্ধকসমূহ (যেমন পাগল হওয়া, শিশু হওয়া) মানুষের ওপর আল্লাহর পক্ষ থেকে আসে, এতে বান্দার কোনো হাত নেই।</p>
+
+        <div class="hukm-box">
+            <div class="hukm-header">প্রভাবের প্রকারভেদ</div>
+            <ul>
+                <li><strong>সম্পূর্ণ বাতিলকারী:</strong> যেমন <span class="word arabic" data-meaning="পাগলামি">الْجُنُونُ</span> এবং <span class="word arabic" data-meaning="মৃত্যু">الْمَوْتُ</span>। এগুলো তাকলিফের যোগ্যতা পুরোপুরি নষ্ট করে দেয়।</li>
+                <li><strong>হ্রাসকারী:</strong> যেমন <span class="word arabic" data-meaning="বুদ্ধিবৈকল্য">الْعَتَهُ</span> (মৃদু পাগলামি)। এতে যোগ্যতা থাকে কিন্তু পূর্ণাঙ্গ নয়।</li>
+                <li><strong>হুকুম পরিবর্তনকারী:</strong> যেমন <span class="word arabic" data-meaning="ভ্রমণ">السَّفَرُ</span>। সফর যোগ্যতা নষ্ট করে না, কিন্তু কিছু বিধান সহজ করে দেয় (যেমন সালাত কসর করা)।</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Page 18: Definition of Hukm Taklifi -->
+    <section id="section-18">
+        <div class="section-header">
+            <h2>হুকুম আল-তাকলিফি (আইনি বিধান)</h2>
+            <span class="page-tag">📄 Page 18</span>
+        </div>
+
+        <div class="term-box">
+            <div class="term-title arabic">تَعْرِيفُ الْحُكْمِ التَّكْلِيفِيِّ</div>
+            <div class="term-def-arabic arabic">خطاب الله تعالى المتعلق بأفعال المكلفين اقتضاءً أو تخييرًا.</div>
+            <div class="term-def-bangla">হুকুম তাকলিফি হলো মুকাল্লাফদের (দায়বদ্ধ ব্যক্তিদের) কাজের সাথে সম্পর্কিত আল্লাহর সম্বোধন, যা কোনো কিছু দাবি করে (করা বা না করা) অথবা এখতিয়ার দেয়।</div>
+        </div>
+
+        <h3>অধিকারের ভিত্তিতে হুকুমের প্রকারভেদ:</h3>
+        <ol>
+            <li>
+                <strong>খাঁটি আল্লাহর হক (حقوق الله تعالى):</strong> যার সুফল জনকল্যাণে নিহিত। যেমন: ঈমান, সালাত, হুদুদ (শাস্তি)।
+            </li>
+            <li>
+                <strong>খাঁটি বান্দার হক (حقوق العباد):</strong> যেমন আর্থিক লেনদেন, ক্ষয়ক্ষতির জরিমানা।
+            </li>
+            <li>
+                <strong>উভয় হক মিশ্রিত (আল্লাহর হক প্রবল):</strong> যেমন অপবাদের শাস্তি (হাদ্দ আল-কাজফ)।
+            </li>
+            <li>
+                <strong>উভয় হক মিশ্রিত (বান্দার হক প্রবল):</strong> যেমন কিসাস (প্রতিশোধ)।
+            </li>
+        </ol>
+    </section>
+
+    <!-- Page 19-20: Classification Diagram -->
+    <section id="section-19-20">
+        <div class="section-header">
+            <h2>হুকুমের প্রকারভেদ (হানাফি মাযহাব অনুযায়ী)</h2>
+            <span class="page-tag">📄 Page 19-20</span>
+        </div>
+
+        <p>হানাফি ফিকহে প্রমাণের শক্তি এবং দলিলের ভিত্তিতে হুকুমকে ৯ ভাগে ভাগ করা হয়েছে (অন্যরা ৫ ভাগে ভাগ করেন)।</p>
+
+        <div class="tree-container" style="flex-direction: column; align-items: center;">
+             <!-- Simplified Vertical Representation of the complex table on Page 19 -->
+             <div class="term-box" style="width: 100%; border-left-color: var(--text);">
+                <div class="hukm-header">বাধ্যবাধকতা ও দলিলের ভিত্তিতে</div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px;">
+                    <div class="node-content" style="background: #dbeafe;">১. ফরজ (الْفَرْضُ)</div>
+                    <div class="node-content" style="background: #dbeafe;">২. ওয়াজিব (الْوَاجِبُ)</div>
+                    <div class="node-content" style="background: #ecfccb;">৩. সুন্নাত (السُّنَّةُ)</div>
+                    <div class="node-content" style="background: #ecfccb;">৪. মুস্তাহাব (الْمُسْتَحَبُّ)</div>
+                    <div class="node-content" style="background: #f3f4f6;">৫. মুবাহ (الْمُبَاحُ)</div>
+                    <div class="node-content" style="background: #fee2e2;">৬. হারাম (الْحَرَامُ)</div>
+                    <div class="node-content" style="background: #ffedd5;">৭. মাকরূহ তাহরিমি (الْمَكْرُوهُ التَّحْرِيمِيُّ)</div>
+                    <div class="node-content" style="background: #ffedd5;">৮. মাকরূহ তানজিহি (الْمَكْرُوهُ التَّنْزِيهِيُّ)</div>
+                    <div class="node-content" style="background: #e5e7eb;">৯. খিলাফে আওলা (خِلَافُ الْأَوْلَى)</div>
+                </div>
+             </div>
+        </div>
+    </section>
+
+    <!-- Page 21: Al-Fard -->
+    <section id="section-21">
+        <div class="section-header">
+            <h2>১. আল-ফরজ (আবশ্যকীয় বিধান)</h2>
+            <span class="page-tag">📄 Page 21</span>
+        </div>
+
+        <div class="term-box">
+            <div class="term-title arabic">الْفَرْضُ</div>
+            <div class="term-def-arabic arabic">ما ثبت طلبه الجازم بدليل قطعي لا شبهة فيه.</div>
+            <div class="term-def-bangla">ফরজ: এমন বিধান যা অকাট্য দলিল (যেমন কুরআন বা মুতাওয়াতির হাদিস) দ্বারা নিশ্চিতভাবে প্রমাণিত।</div>
+        </div>
+
+        <div class="hukm-box">
+            <div class="hukm-header">হুকুম (বিধান)</div>
+            <ul>
+                <li>এর ওপর আমল করা আবশ্যক।</li>
+                <li>একে অস্বীকার করা <span class="word arabic" data-meaning="কুফর/অবিশ্বাস">كُفْرٌ</span> (কুফর)।</li>
+                <li>বিনা ওজরে পরিত্যাগ করা ফাসিকি এবং শাস্তির যোগ্য অপরাধ।</li>
+            </ul>
+        </div>
+
+        <h3>প্রকারভেদ:</h3>
+        <div class="tree-container">
+            <div class="tree-node">
+                <div class="node-content root">أَقْسَامُ الْفَرْضِ</div>
+                <div class="tree-children">
+                    <div class="tree-node">
+                        <div class="node-content">فَرْضُ عَيْنٍ</div>
+                        <p style="margin-top: 5px; font-size: 0.9em;">(প্রত্যেকের ওপর আবশ্যক, যেমন ৫ ওয়াক্ত সালাত)</p>
+                    </div>
+                    <div class="tree-node">
+                        <div class="node-content">فَرْضُ كِفَايَةٍ</div>
+                        <p style="margin-top: 5px; font-size: 0.9em;">(দলের কেউ আদায় করলে সবার পক্ষ থেকে আদায় হয়, যেমন জানাজার সালাত)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<script>
+    // 1. Live Search Logic
+    const searchInput = document.getElementById('search-input');
+    const contentDiv = document.getElementById('main-content');
+
+    searchInput.addEventListener('input', function(e) {
+        const term = e.target.value.toLowerCase();
+        const sections = contentDiv.querySelectorAll('section');
+
+        // Remove previous highlights
+        document.querySelectorAll('.highlight-text').forEach(span => {
+            const parent = span.parentNode;
+            parent.replaceChild(document.createTextNode(span.textContent), span);
+            parent.normalize(); // Merge text nodes
+        });
+
+        if (term.length < 2) return;
+
+        sections.forEach(section => {
+            const walker = document.createTreeWalker(section, NodeFilter.SHOW_TEXT, null, false);
+            const nodesToReplace = [];
+            
+            while(walker.nextNode()) {
+                const node = walker.currentNode;
+                if (node.parentElement.tagName !== 'SCRIPT' && node.parentElement.tagName !== 'STYLE' && node.nodeValue.toLowerCase().includes(term)) {
+                    nodesToReplace.push(node);
+                }
+            }
+
+            nodesToReplace.forEach(node => {
+                const fragment = document.createDocumentFragment();
+                const parts = node.nodeValue.split(new RegExp(`(${term})`, 'gi'));
+                
+                parts.forEach(part => {
+                    if (part.toLowerCase() === term) {
+                        const span = document.createElement('span');
+                        span.className = 'highlight-text';
+                        span.textContent = part;
+                        fragment.appendChild(span);
+                    } else {
+                        fragment.appendChild(document.createTextNode(part));
+                    }
+                });
+                
+                node.parentNode.replaceChild(fragment, node);
+            });
+        });
+    });
+
+    // 2. Navigation Menu Builder
+    function buildMenu() {
+        const menu = document.getElementById('nav-menu');
+        menu.innerHTML = '';
+        document.querySelectorAll('section').forEach(sec => {
+            const title = sec.querySelector('h2').innerText;
+            const link = document.createElement('a');
+            link.className = 'dropdown-item';
+            link.href = '#' + sec.id;
+            link.innerText = title;
+            link.onclick = () => {
+                document.getElementById('nav-menu').classList.remove('active');
+            };
+            menu.appendChild(link);
+        });
+    }
+
+    function toggleMenu() {
+        const menu = document.getElementById('nav-menu');
+        menu.classList.toggle('active');
+    }
+
+    // Initialize Menu
+    buildMenu();
+
+    // 3. Add Section Logic
+    document.getElementById('add-section-btn').addEventListener('click', () => {
+        const title = prompt("Enter Section Title:");
+        if (!title) return;
+        
+        const content = prompt("Enter Section Content:");
+        if (!content) return;
+
+        const newId = 'section-' + new Date().getTime();
+        const newSection = document.createElement('section');
+        newSection.id = newId;
+        newSection.innerHTML = `
+            <div class="section-header">
+                <h2>${title}</h2>
+                <span class="page-tag">Custom Added</span>
+            </div>
+            <p>${content}</p>
+        `;
+        
+        document.getElementById('main-content').appendChild(newSection);
+        buildMenu();
+        
+        // Smooth scroll to new section
+        newSection.scrollIntoView({behavior: 'smooth'});
+    });
+
+    // 4. Word Tooltip Logic (Enhanced)
+    document.querySelectorAll('.word').forEach(word => {
+        const meaning = word.getAttribute('data-meaning');
+        if (meaning) {
+            const tooltip = document.createElement('div');
+            tooltip.className = 'tooltip-box';
+            tooltip.innerText = meaning;
+            word.appendChild(tooltip);
+        }
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.menu-container')) {
+            document.getElementById('nav-menu').classList.remove('active');
+        }
+    });
+</script>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>উসূলুল ফিকহ: দলিলের প্রকারভেদ ও ওয়াজিব (পৃষ্ঠা ২২-২৪)</title>
+    <style>
+        :root {
+            --bg: #f9fafb;
+            --text: #1f2937;
+            --accent: #0ea5a4;
+            --accent-light: #e0f7f6;
+            --border: #e5e7eb;
+            --white: #ffffff;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --header-height: 70px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Hind Siliguri', sans-serif;
+            line-height: 1.8;
+            padding-top: var(--header-height);
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            color: var(--text);
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .arabic {
+            font-family: 'Amiri', serif;
+            direction: rtl;
+            font-size: 1.3em;
+            line-height: 2;
+            color: #000;
+        }
+
+        .highlight-match {
+            background-color: #fde68a;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        /* Header Structure */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: var(--header-height);
+            background: var(--white);
+            box-shadow: var(--shadow);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .header-left {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .site-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--accent);
+        }
+
+        .subtitle {
+            font-size: 0.8rem;
+            color: #6b7280;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        /* Search Bar */
+        #search-container {
+            position: relative;
+        }
+
+        #search-input {
+            padding: 8px 12px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            outline: none;
+            font-size: 0.9rem;
+            width: 200px;
+            transition: border-color 0.2s;
+        }
+
+        #search-input:focus {
+            border-color: var(--accent);
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 8px 16px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            opacity: 0.9;
+        }
+
+        .menu-container {
+            position: relative;
+        }
+
+        .menu-btn {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            width: 220px;
+            display: none;
+            flex-direction: column;
+            padding: 10px 0;
+            max-height: 300px;
+            overflow-y: auto;
+            z-index: 1001;
+        }
+
+        .dropdown-menu.active {
+            display: flex;
+        }
+
+        .dropdown-item {
+            padding: 10px 15px;
+            text-decoration: none;
+            color: var(--text);
+            font-size: 0.9rem;
+            transition: background 0.1s;
+        }
+
+        .dropdown-item:hover {
+            background: var(--bg);
+            color: var(--accent);
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1100px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            scroll-margin-top: 90px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--accent-light);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .page-tag {
+            background: var(--accent-light);
+            color: var(--accent);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        /* Tree Diagram */
+        .tree-container {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+            overflow-x: auto;
+            padding-bottom: 10px;
+        }
+
+        .tree-node {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            padding: 0 10px;
+        }
+
+        .node-content {
+            background: var(--white);
+            border: 1px solid var(--accent);
+            padding: 10px 15px;
+            border-radius: 6px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            min-width: 120px;
+            font-weight: bold;
+            font-size: 0.95rem;
+        }
+
+        .node-content.root {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+
+        .tree-children {
+            display: flex;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .tree-children::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            width: 2px;
+            height: 20px;
+            background: var(--accent);
+        }
+
+        .tree-children .tree-node::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            width: 2px;
+            height: 20px;
+            background: var(--accent);
+        }
+
+        .tree-children .tree-node:first-child::after {
+            content: '';
+            position: absolute;
+            top: -20px;
+            right: 50%;
+            width: 50%;
+            height: 2px;
+            background: var(--accent);
+        }
+
+        .tree-children .tree-node:last-child::after {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            width: 50%;
+            height: 2px;
+            background: var(--accent);
+        }
+
+        .tree-children .tree-node:not(:first-child):not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--accent);
+        }
+        
+        /* Terminology Box */
+        .term-box {
+            background: #f8fafc;
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .term-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--accent);
+            margin-bottom: 8px;
+        }
+
+        .term-def-arabic {
+            font-size: 1.1rem;
+            color: #4b5563;
+            margin-bottom: 10px;
+        }
+
+        .term-def-bangla {
+            font-size: 1rem;
+            color: var(--text);
+        }
+
+        /* Hukm Box */
+        .hukm-box {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-left: 4px solid #f59e0b; /* Amber for Warning/Caution */
+            border-radius: 6px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        
+        .hukm-heading {
+            font-weight: bold;
+            color: #f59e0b;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        /* Word by Word System */
+        .word {
+            position: relative;
+            cursor: pointer;
+            border-bottom: 1px dotted var(--accent);
+            transition: background 0.2s;
+            display: inline-block;
+            margin: 0 2px;
+        }
+
+        .word:hover {
+            background-color: var(--accent-light);
+        }
+
+        /* Modern Sanad/Logic Diagram */
+        .sanad-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px 0;
+            gap: 10px;
+        }
+
+        .sanad-node {
+            background: white;
+            border: 1px solid var(--border);
+            padding: 10px 20px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            width: fit-content;
+            position: relative;
+        }
+
+        .sanad-arrow {
+            color: var(--accent);
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-right {
+                gap: 5px;
+            }
+            #search-input {
+                width: 120px;
+            }
+            .tree-children {
+                flex-direction: column;
+                align-items: center;
+            }
+            .tree-children::before,
+            .tree-children .tree-node::after,
+            .tree-children .tree-node::before {
+                display: none; /* Hide connector lines on mobile */
+            }
+            .tree-node {
+                margin-top: 10px;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="header-left">
+        <div class="site-title">উসূলুল ফিকহ</div>
+        <div class="subtitle">দলিল ও ওয়াজিব (পৃষ্ঠা ২২-২৪)</div>
+    </div>
+    
+    <div class="header-right">
+        <div id="search-container">
+            <input type="text" id="search-input" placeholder="অনুসন্ধান...">
+        </div>
+        <button class="btn btn-primary" id="add-section-btn">+ Add Section</button>
+        <div class="menu-container">
+            <button class="menu-btn" onclick="toggleMenu()">⋮</button>
+            <div class="dropdown-menu" id="nav-menu">
+                <!-- Javascript will populate this -->
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container" id="main-content">
+
+    <!-- PAGE 22: Dalil Classification -->
+    <section id="section-dalil">
+        <div class="section-header">
+            <h2>দলিলের প্রকারভেদ (অকাট্য ও ধারণাপ্রসূত)</h2>
+            <span class="page-tag">📄 Page 22</span>
+        </div>
+
+        <!-- Tree Diagram -->
+        <div class="tree-container">
+            <div class="tree-node">
+                <div class="node-content root">أَقْسَامُ الدَّلِيلِ<br>(দলিলের প্রকারভেদ)</div>
+                <div class="tree-children">
+                    <div class="tree-node">
+                        <div class="node-content">قَطْعِيُّ الثُّبُوتِ<br>(অকাট্য সূত্রে প্রমাণিত)</div>
+                    </div>
+                    <div class="tree-node">
+                        <div class="node-content">ظَنِّيُّ الثُّبُوتِ<br>(ধারণাপ্রসূত সূত্রে প্রমাণিত)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p>দলিল বা প্রমাণের শক্তি বিচারের ক্ষেত্রে উসূলবিদগণ দলিলকে চারটি ভাগে ভাগ করেছেন:</p>
+
+        <div class="term-box">
+            <div class="term-title">১. প্রথম প্রকার</div>
+            <div class="term-def-arabic arabic">قَطْعِيُّ الثُّبُوتِ وَقَطْعِيُّ الدَّلَالَةِ</div>
+            <div class="term-def-bangla">যা অকাট্য সূত্রে প্রমাণিত এবং যার অর্থও অকাট্য। এতে কোনো সন্দেহ নেই। যেমন: কুরআনের আয়াতসমূহ এবং মুতাওয়াতির হাদিস যার অর্থ নিয়ে উম্মাহর ঐকমত্য রয়েছে।</div>
+        </div>
+
+        <div class="term-box">
+            <div class="term-title">২. দ্বিতীয় প্রকার</div>
+            <div class="term-def-arabic arabic">قَطْعِيُّ الثُّبُوتِ وَظَنِّيُّ الدَّلَالَةِ</div>
+            <div class="term-def-bangla">যা অকাট্য সূত্রে প্রমাণিত কিন্তু তার মর্মার্থ ধারণাপ্রসূত। অর্থাৎ এর অর্থ নিয়ে আলেমদের মধ্যে মতভেদ রয়েছে। যেমন কুরআনের কোনো আয়াত যার একাধিক তাফসির সম্ভব।</div>
+        </div>
+
+        <div class="term-box">
+            <div class="term-title">৩. তৃতীয় প্রকার</div>
+            <div class="term-def-arabic arabic">ظَنِّيُّ الثُّبُوتِ وَظَنِّيُّ الدَّلَالَةِ</div>
+            <div class="term-def-bangla">যা ধারণাপ্রসূত সূত্রে প্রমাণিত এবং তার অর্থও ধারণাপ্রসূত। অর্থাৎ সনদেও সন্দেহ (যেমন খবরে ওয়াহিদ) এবং অর্থেও একাধিক সম্ভাবনা রয়েছে।</div>
+        </div>
+
+        <div class="term-box">
+            <div class="term-title">৪. চতুর্থ প্রকার</div>
+            <div class="term-def-arabic arabic">ظَنِّيُّ الثُّبُوتِ وَقَطْعِيُّ الدَّلَالَةِ</div>
+            <div class="term-def-bangla">যা ধারণাপ্রসূত সূত্রে প্রমাণিত কিন্তু তার অর্থ অকাট্য। যেমন খবরে ওয়াহিদ বা একক সূত্রে বর্ণিত হাদিস যার মর্মার্থ স্পষ্ট এবং উম্মাহর ঐকমত্য রয়েছে।</div>
+        </div>
+
+        <div class="hukm-box">
+            <div class="hukm-heading">حُكْمُ الدَّلَائِلِ (দলিলসমূহের হুকুম)</div>
+            <p>ফরজ ও হারাম কেবল প্রথম প্রকার (অকাট্য দলিল) দ্বারা প্রমাণিত হয়। বাকি হুকুমসমূহ (ওয়াজিব, সুন্নাত, মাকরূহ) ধারণাপ্রসূত দলিল দ্বারা প্রমাণিত হয়।</p>
+        </div>
+    </section>
+
+    <!-- PAGE 23: Definition of Wajib -->
+    <section id="section-wajib">
+        <div class="section-header">
+            <h2>আল-ওয়াজিব (আবশ্যকীয় বিধান)</h2>
+            <span class="page-tag">📄 Page 23</span>
+        </div>
+
+        <!-- Terminology Box -->
+        <div class="term-box">
+            <div class="term-title arabic">تَعْرِيفُ الْوَاجِبِ</div>
+            
+            <p><strong>আভিধানিক অর্থ (لُغَةً):</strong> <span class="word arabic" data-meaning="পতিত হওয়া/স্থির হওয়া">السَّاقِطُ</span> (যা পতিত বা সাব্যস্ত হয়েছে)।</p>
+            
+            <p><strong>পারিভাষিক সংজ্ঞা (اصْطِلَاحًا):</strong></p>
+            <div class="term-def-arabic arabic">مَا طُولِبَ فِعْلُهُ حَتْمًا بِدَلِيلٍ فِيهِ شُبْهَةٌ</div>
+            <div class="term-def-bangla">ওয়াজিব হলো এমন বিধান যার পালন অপরিহার্যভাবে চাওয়া হয়েছে, কিন্তু তা এমন দলিল দ্বারা প্রমাণিত যার মধ্যে কিছুটা সংশয় বা সন্দেহ (শুভাহ) রয়েছে (অর্থাৎ তা অকাট্য নয়)।</div>
+        </div>
+
+        <div class="hukm-box">
+            <div class="hukm-heading">حُكْمُ الْوَاجِبِ (ওয়াজিবের হুকুম)</div>
+            <ul>
+                <li><span class="word arabic" data-meaning="আমল করা জরুরি">لُزُومُ الْعَمَلِ</span>: প্রবল ধারণার ভিত্তিতে এর ওপর আমল করা আবশ্যক।</li>
+                <li>বিনা ওজরে ওয়াজিব ত্যাগ করা গুনাহের কাজ এবং ফাসিকি, তবে তা অস্বীকার করা কুফর নয় (কারণ দলিলে সংশয় আছে)।</li>
+                <li>ওয়াজিব অস্বীকারকারীকে কাফের বলা যাবে না, তবে সে বিভ্রান্ত।</li>
+            </ul>
+        </div>
+
+        <!-- Example Section: Udhiyah -->
+        <h3>উদাহরণ ১: কুরবানী (الْأُضْحِيَّةُ)</h3>
+        <div class="sanad-container">
+            <div class="sanad-node">দলিল (কুরআন): <span class="arabic">فَصَلِّ لِرَبِّكَ وَانْحَرْ</span></div>
+            <div class="sanad-arrow">↓</div>
+            <div class="sanad-node">দলিল অকাট্য (কুরআন), কিন্তু অর্থ ধারণাপ্রসূত (মতভেদপূর্ণ)</div>
+            <div class="sanad-arrow">↓</div>
+            <div class="sanad-node">হুকুম: ওয়াজিব (ইমাম আবু হানিফার মতে)</div>
+        </div>
+        <p>ব্যাখ্যা: আয়াতে 'ওয়ানহার' দ্বারা কুরবানী উদ্দেশ্য কি না তা নিয়ে মতভেদ থাকায় এটি ফরজের স্তরে পৌঁছেনি, বরং ওয়াজিব হয়েছে।</p>
+
+        <!-- Example Section: Witr -->
+        <h3>উদাহরণ ২: বিতর সালাত (صَلَاةُ الْوِتْرِ)</h3>
+        <div class="sanad-container">
+            <div class="sanad-node">দলিল: খবরে ওয়াহিদ (একক হাদিস)</div>
+            <div class="sanad-arrow">↓</div>
+            <div class="sanad-node">সনদ বা সূত্র ধারণাপ্রসূত (অকাট্য নয়)</div>
+            <div class="sanad-arrow">↓</div>
+            <div class="sanad-node">হুকুম: ওয়াজিব</div>
+        </div>
+        <p>রাসূলুল্লাহ ﷺ এর নিয়মিত আমল এবং তাকীদের কারণে এটি সুন্নাত থেকে উর্ধ্বে, কিন্তু দলিল মুতাওয়াতির না হওয়ায় ফরজের নিচে।</p>
+    </section>
+
+    <!-- PAGE 24: Indicators of Wajib -->
+    <section id="section-indicators">
+        <div class="section-header">
+            <h2>ওয়াজিব ও ফরজের শব্দাবলী</h2>
+            <span class="page-tag">📄 Page 24</span>
+        </div>
+
+        <p>কুরআন ও হাদিসে যে শব্দগুলো দ্বারা আবশ্যকতা (লুজুম) বোঝায়, তা তিন প্রকার:</p>
+
+        <div class="tree-container">
+            <div class="tree-node">
+                <div class="node-content root">كَلِمَاتُ الْوُجُوبِ<br>(আবশ্যকতার শব্দাবলী)</div>
+                <div class="tree-children">
+                    <div class="tree-node"><div class="node-content">সরাসরি শব্দ<br>(فرض/كتب)</div></div>
+                    <div class="tree-node"><div class="node-content">আমর বা নির্দেশ<br>(فعل الأمر)</div></div>
+                    <div class="tree-node"><div class="node-content">প্রসঙ্গ বা ইঙ্গিত<br>(قرائن)</div></div>
+                </div>
+            </div>
+        </div>
+
+        <h3>১. সরাসরি আবশ্যকতার শব্দ</h3>
+        <p>যেমন: <span class="word arabic" data-meaning="ফরজ করা হয়েছে">كُتِبَ</span>, <span class="word arabic" data-meaning="ফরজ">فَرَضَ</span>, <span class="word arabic" data-meaning="ওয়াজিব">وَجَبَ</span> ইত্যাদি শব্দ।</p>
+
+        <h3>২. আমরের সিগাহ (নির্দেশসূচক ক্রিয়াপদ)</h3>
+        <p>গায়েব বা উপস্থিত কাউকে নির্দেশ দেওয়া। মূলত 'আমর' দ্বারা ওয়াজিব সাব্যস্ত হয়, যদি না অন্য কোনো দলিল তা নফল বা মুবাহ হওয়ার ইঙ্গিত দেয়।</p>
+
+        <h3>৩. ইসমে ফে'ল (ক্রিয়া-বিশেষ্য) ও মাসদার (ক্রিয়ামূল)</h3>
+        <p>কখনও কখনও ক্রিয়ামূল ব্যবহার করে নির্দেশ দেওয়া হয়।</p>
+        <div class="term-box">
+            <div class="term-title">উদাহরণ (কুরআন)</div>
+            <div class="arabic">فَإِذَا لَقِيتُمُ الَّذِينَ كَفَرُوا فَضَرْبَ الرِّقَابِ</div>
+            <div class="term-def-bangla">অর্থ: "যখন তোমরা কাফেরদের সাথে সাক্ষাৎ করবে, তখন গর্দানে আঘাত করো।"</div>
+            <p>এখানে <span class="word arabic" data-meaning="আঘাত করা (মাসদার)">ضَرْبَ</span> শব্দটি <span class="word arabic" data-meaning="আঘাত করো (আমর)">اضْرِبُوا</span> (আঘাত করো) অর্থে ব্যবহৃত হয়েছে এবং এটি আবশ্যকতা নির্দেশ করে।</p>
+        </div>
+
+        <h3>৪. প্রসঙ্গ ও ইঙ্গিত (The Context)</h3>
+        <p>এমন শব্দ যা সরাসরি আদেশ নয়, কিন্তু বাক্যের প্রবাহ আবশ্যকতার ইঙ্গিত দেয়।</p>
+        <div class="term-box">
+             <div class="term-title">উদাহরণ (কুরআন)</div>
+             <div class="arabic">وَالْوَالِدَاتُ يُرْضِعْنَ أَوْلَادَهُنَّ</div>
+             <div class="term-def-bangla">অর্থ: "মায়েরা তাদের সন্তানদের দুধ পান করাবে।"</div>
+             <p>এখানে বাক্যটি খবর বা সংবাদ হিসেবে এসেছে (<span class="word arabic" data-meaning="তারা পান করায়">يُرْضِعْنَ</span>), কিন্তু এর উদ্দেশ্য হলো আদেশ বা নির্দেশ। অর্থাৎ, দুধ পান করানো মায়েদের ওপর দায়িত্ব।</p>
+        </div>
+    </section>
+
+</div>
+
+<script>
+    // 1. Tooltip Logic for Words
+    document.querySelectorAll('.word').forEach(word => {
+        const meaning = word.getAttribute('data-meaning');
+        
+        // Create tooltip element logic
+        word.addEventListener('mouseenter', () => {
+            let tooltip = document.createElement('div');
+            tooltip.className = 'js-tooltip';
+            tooltip.innerText = meaning;
+            tooltip.style.position = 'absolute';
+            tooltip.style.background = '#333';
+            tooltip.style.color = '#fff';
+            tooltip.style.padding = '5px 10px';
+            tooltip.style.borderRadius = '4px';
+            tooltip.style.fontSize = '0.8rem';
+            tooltip.style.bottom = '100%';
+            tooltip.style.left = '50%';
+            tooltip.style.transform = 'translateX(-50%)';
+            tooltip.style.whiteSpace = 'nowrap';
+            tooltip.style.zIndex = '100';
+            tooltip.style.pointerEvents = 'none';
+            word.appendChild(tooltip);
+        });
+
+        word.addEventListener('mouseleave', () => {
+            const tooltip = word.querySelector('.js-tooltip');
+            if(tooltip) tooltip.remove();
+        });
+    });
+
+    // 2. Navigation Menu Builder
+    function buildMenu() {
+        const menu = document.getElementById('nav-menu');
+        menu.innerHTML = '';
+        document.querySelectorAll('section').forEach(sec => {
+            const title = sec.querySelector('h2').innerText;
+            const link = document.createElement('a');
+            link.className = 'dropdown-item';
+            link.href = '#' + sec.id;
+            link.innerText = title;
+            link.onclick = () => {
+                document.getElementById('nav-menu').classList.remove('active');
+            };
+            menu.appendChild(link);
+        });
+    }
+
+    function toggleMenu() {
+        document.getElementById('nav-menu').classList.toggle('active');
+    }
+
+    // Initialize Menu
+    buildMenu();
+
+    // 3. Live Search System
+    const searchInput = document.getElementById('search-input');
+    const contentDiv = document.getElementById('main-content');
+
+    searchInput.addEventListener('input', function(e) {
+        const term = e.target.value.toLowerCase();
+        
+        // Remove previous highlights
+        document.querySelectorAll('.highlight-match').forEach(span => {
+            const text = document.createTextNode(span.innerText);
+            span.parentNode.replaceChild(text, span);
+        });
+        
+        // Normalize text nodes
+        contentDiv.normalize();
+
+        if (term.length < 2) return;
+
+        const walker = document.createTreeWalker(contentDiv, NodeFilter.SHOW_TEXT, null, false);
+        const nodes = [];
+        
+        while(walker.nextNode()) nodes.push(walker.currentNode);
+
+        nodes.forEach(node => {
+            if (node.parentElement.tagName === 'SCRIPT' || node.parentElement.tagName === 'STYLE') return;
+            
+            const text = node.nodeValue;
+            const index = text.toLowerCase().indexOf(term);
+            
+            if (index !== -1) {
+                const range = document.createRange();
+                range.setStart(node, index);
+                range.setEnd(node, index + term.length);
+                
+                const span = document.createElement('span');
+                span.className = 'highlight-match';
+                range.surroundContents(span);
+            }
+        });
+    });
+
+    // 4. Add Section Feature
+    document.getElementById('add-section-btn').addEventListener('click', () => {
+        const title = prompt("Enter Section Title:");
+        if (!title) return;
+        
+        const content = prompt("Enter Section Content (HTML allowed):");
+        if (!content) return;
+
+        const newId = 'custom-section-' + Date.now();
+        const sectionHtml = `
+            <section id="${newId}">
+                <div class="section-header">
+                    <h2>${title}</h2>
+                    <span class="page-tag">Custom Added</span>
+                </div>
+                <div>${content}</div>
+            </section>
+        `;
+        
+        contentDiv.insertAdjacentHTML('beforeend', sectionHtml);
+        buildMenu();
+        
+        // Smooth scroll to new section
+        document.getElementById(newId).scrollIntoView({ behavior: 'smooth' });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.menu-container')) {
+            document.getElementById('nav-menu').classList.remove('active');
+        }
+    });
+
+</script>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>উসূলুল ফিকহ: সুন্নাহর আলোচনা (পৃষ্ঠা ২৫-২৭)</title>
+    <style>
+        :root {
+            --bg: #f9fafb;
+            --text: #1f2937;
+            --accent: #0ea5a4;
+            --accent-light: #e0f7f6;
+            --border: #e5e7eb;
+            --white: #ffffff;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --header-height: 70px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Hind Siliguri', sans-serif;
+            line-height: 1.8;
+            padding-top: var(--header-height);
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            color: var(--text);
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .arabic {
+            font-family: 'Amiri', serif;
+            direction: rtl;
+            font-size: 1.3em;
+            line-height: 2;
+            color: #000;
+        }
+
+        .highlight-match {
+            background-color: #fde68a;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        /* Header Structure */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: var(--header-height);
+            background: var(--white);
+            box-shadow: var(--shadow);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .header-left {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .site-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--accent);
+        }
+
+        .subtitle {
+            font-size: 0.8rem;
+            color: #6b7280;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        /* Search Bar */
+        #search-container {
+            position: relative;
+        }
+
+        #search-input {
+            padding: 8px 12px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            outline: none;
+            font-size: 0.9rem;
+            width: 200px;
+            transition: border-color 0.2s;
+        }
+
+        #search-input:focus {
+            border-color: var(--accent);
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 8px 16px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            opacity: 0.9;
+        }
+
+        .menu-container {
+            position: relative;
+        }
+
+        .menu-btn {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            width: 220px;
+            display: none;
+            flex-direction: column;
+            padding: 10px 0;
+            max-height: 300px;
+            overflow-y: auto;
+            z-index: 1001;
+        }
+
+        .dropdown-menu.active {
+            display: flex;
+        }
+
+        .dropdown-item {
+            padding: 10px 15px;
+            text-decoration: none;
+            color: var(--text);
+            font-size: 0.9rem;
+            transition: background 0.1s;
+        }
+
+        .dropdown-item:hover {
+            background: var(--bg);
+            color: var(--accent);
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1100px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            scroll-margin-top: 90px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--accent-light);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .page-tag {
+            background: var(--accent-light);
+            color: var(--accent);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        /* Tree Diagram */
+        .tree-container {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+            overflow-x: auto;
+            padding-bottom: 10px;
+        }
+
+        .tree-node {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            padding: 0 10px;
+        }
+
+        .node-content {
+            background: var(--white);
+            border: 1px solid var(--accent);
+            padding: 10px 15px;
+            border-radius: 6px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            min-width: 120px;
+            font-weight: bold;
+            font-size: 0.95rem;
+        }
+
+        .node-content.root {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+
+        .tree-children {
+            display: flex;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .tree-children::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            width: 2px;
+            height: 20px;
+            background: var(--accent);
+        }
+
+        .tree-children .tree-node::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            width: 2px;
+            height: 20px;
+            background: var(--accent);
+        }
+
+        .tree-children .tree-node:first-child::after {
+            content: '';
+            position: absolute;
+            top: -20px;
+            right: 50%;
+            width: 50%;
+            height: 2px;
+            background: var(--accent);
+        }
+
+        .tree-children .tree-node:last-child::after {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            width: 50%;
+            height: 2px;
+            background: var(--accent);
+        }
+
+        .tree-children .tree-node:not(:first-child):not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--accent);
+        }
+        
+        /* Terminology Box */
+        .term-box {
+            background: #f8fafc;
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .term-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--accent);
+            margin-bottom: 8px;
+        }
+
+        .term-def-arabic {
+            font-size: 1.1rem;
+            color: #4b5563;
+            margin-bottom: 10px;
+        }
+
+        .term-def-bangla {
+            font-size: 1rem;
+            color: var(--text);
+        }
+
+        /* Hukm Box */
+        .hukm-box {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-left: 4px solid #f59e0b; /* Amber */
+            border-radius: 6px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        
+        .hukm-heading {
+            font-weight: bold;
+            color: #f59e0b;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        /* Word by Word System */
+        .word {
+            position: relative;
+            cursor: pointer;
+            border-bottom: 1px dotted var(--accent);
+            transition: background 0.2s;
+            display: inline-block;
+            margin: 0 2px;
+        }
+
+        .word:hover {
+            background-color: var(--accent-light);
+        }
+
+        /* Modern Sanad/Logic Diagram */
+        .sanad-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px 0;
+            gap: 10px;
+        }
+
+        .sanad-node {
+            background: white;
+            border: 1px solid var(--border);
+            padding: 10px 20px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            width: fit-content;
+            position: relative;
+        }
+
+        .sanad-arrow {
+            color: var(--accent);
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-right {
+                gap: 5px;
+            }
+            #search-input {
+                width: 120px;
+            }
+            .tree-children {
+                flex-direction: column;
+                align-items: center;
+            }
+            .tree-children::before,
+            .tree-children .tree-node::after,
+            .tree-children .tree-node::before {
+                display: none; /* Hide connector lines on mobile */
+            }
+            .tree-node {
+                margin-top: 10px;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="header-left">
+        <div class="site-title">উসূলুল ফিকহ</div>
+        <div class="subtitle">সুন্নাহর আলোচনা (পৃষ্ঠা ২৫-২৭)</div>
+    </div>
+    
+    <div class="header-right">
+        <div id="search-container">
+            <input type="text" id="search-input" placeholder="অনুসন্ধান...">
+        </div>
+        <button class="btn btn-primary" id="add-section-btn">+ Add Section</button>
+        <div class="menu-container">
+            <button class="menu-btn" onclick="toggleMenu()">⋮</button>
+            <div class="dropdown-menu" id="nav-menu">
+                <!-- Javascript will populate this -->
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container" id="main-content">
+
+    <!-- PAGE 25: Definition of Sunnah -->
+    <section id="section-sunnah-def">
+        <div class="section-header">
+            <h2>সুন্নাহর পরিচয় ও হুকুম</h2>
+            <span class="page-tag">📄 Page 25</span>
+        </div>
+
+        <div class="term-box">
+            <div class="term-title arabic">تَعْرِيفُ السُّنَّةِ</div>
+            <p><strong>আভিধানিক অর্থ (لُغَةً):</strong> <span class="word arabic" data-meaning="পদ্ধতি/রাস্তা">الطَّرِيقَةُ</span> (পদ্ধতি) এবং <span class="word arabic" data-meaning="অভ্যাস">الْعَادَةُ</span> (অভ্যাস)।</p>
+            
+            <p><strong>পারিভাষিক সংজ্ঞা (اصْطِلَاحًا):</strong></p>
+            <div class="term-def-arabic arabic">مَا طُلِبَ فِعْلُهُ بِدُونِ لُزُومٍ مَعَ تَأْكِيدِ الْفِعْلِ</div>
+            <div class="term-def-bangla">সুন্নাহ হলো এমন কাজ যা পালন করার জন্য চাওয়া হয়েছে, কিন্তু তা অপরিহার্য বা আবশ্যক (Luzum) নয়, তবে কাজের প্রতি তাকিদ বা গুরুত্বারোপ রয়েছে।</div>
+        </div>
+
+        <div class="hukm-box">
+            <div class="hukm-heading">حُكْمُ السُّنَّةِ (সুন্নাহর বিধান)</div>
+            <ul>
+                <li><strong>পালন করলে:</strong> সওয়াব ও প্রশংসা পাওয়া যায়।</li>
+                <li><strong>ত্যাগ করলে:</strong> তিরস্কার ও নিন্দা (لوم وعتاب) এর যোগ্য হয়, তবে শাস্তি (عقاب) হয় না।</li>
+                <li><strong>ব্যতিক্রম:</strong> যদি কোনো সুন্নাহ ইসলামের প্রতীক (شعار) হয় (যেমন আজান), এবং কোনো এলাকার সবাই তা ত্যাগ করে, তবে তাদের বিরুদ্ধে ব্যবস্থা নেওয়া বৈধ।</li>
+            </ul>
+        </div>
+
+        <div class="term-box">
+             <div class="term-title">মাসদাক (مصداقه) বা অন্তর্ভুক্ত বিষয়</div>
+             <p>নবী করীম ﷺ থেকে যা কিছু প্রমাণিত হয়েছে:</p>
+             <ol>
+                 <li><span class="word arabic" data-meaning="বাণী/উক্তি">قَوْلًا</span> (কথা দ্বারা)</li>
+                 <li><span class="word arabic" data-meaning="কর্ম/কাজ">فِعْلًا</span> (কাজ দ্বারা)</li>
+                 <li><span class="word arabic" data-meaning="সমর্থন/অনুমোদন">تَقْرِيرًا</span> (মৌন সমর্থন দ্বারা)</li>
+             </ol>
+        </div>
+    </section>
+
+    <!-- PAGE 25-26: Classification of Sunnah -->
+    <section id="section-sunnah-types">
+        <div class="section-header">
+            <h2>সুন্নাহর প্রকারভেদ (হুদা ও জাওয়াইদ)</h2>
+            <span class="page-tag">📄 Page 25-26</span>
+        </div>
+
+        <p>সুন্নাহ প্রধানত দুই প্রকার:</p>
+
+        <!-- Tree Diagram -->
+        <div class="tree-container">
+            <div class="tree-node">
+                <div class="node-content root">أَقْسَامُ السُّنَّةِ<br>(সুন্নাহর প্রকারভেদ)</div>
+                <div class="tree-children">
+                    <div class="tree-node">
+                        <div class="node-content">سُنَّةُ الْهُدَى<br>(হেদায়াতের সুন্নাহ)</div>
+                    </div>
+                    <div class="tree-node">
+                        <div class="node-content">سُنَّةٌ زَائِدَةٌ<br>(অতিরিক্ত সুন্নাহ)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="term-box">
+            <div class="term-title arabic">أ - سُنَّةُ الْهُدَى</div>
+            <div class="term-def-bangla">একে <strong>সুন্নাহ মুয়াক্কাদা</strong> (السُّنَّةُ الْمُؤَكَّدَةُ) ও বলা হয়। এটি হলো এমন ইবাদত যা নবী করীম ﷺ নিয়মিত পালন করেছেন, কেবল ওজর বা কারণবশত মাঝেমধ্যে ছেড়েছেন।</div>
+            <p><strong>উদাহরণ:</strong> আজান, ইকামাত, জামাতে সালাত আদায় করা।</p>
+            <p><strong>হুকুম:</strong> এটি ওয়াজিবের কাছাকাছি। বিনা ওজরে ত্যাগ করা মাকরূহ বা নিন্দনীয়।</p>
+        </div>
+
+        <div class="term-box">
+            <div class="term-title arabic">ب - السُّنَّةُ الزَّائِدَةُ</div>
+            <div class="term-def-bangla">একে 'সুন্নাহ গায়রে মুয়াক্কাদা' বা অতিরিক্ত সুন্নাহ বলা হয়। এটি নবীজির ﷺ এমন কাজ যা তিনি ইবাদত হিসেবে নয়, বরং সাধারণ অভ্যাস হিসেবে করতেন।</div>
+            <p><strong>উদাহরণ:</strong> নবীজির ﷺ চলাফেরা, পোশাক পরিধান, পানাহার, ঘুমানোর পদ্ধতি।</p>
+            <p><strong>হুকুম:</strong> এটি পালন করা উত্তম (মুস্তাহাব), কিন্তু ত্যাগ করলে কোনো নিন্দা বা মাকরূহ হবে না।</p>
+        </div>
+    </section>
+
+    <!-- PAGE 26-27: Classification of Sunnah Muakkadah -->
+    <section id="section-muakkadah-types">
+        <div class="section-header">
+            <h2>সুন্নাহ মুয়াক্কাদার প্রকারভেদ</h2>
+            <span class="page-tag">📄 Page 26-27</span>
+        </div>
+
+        <div class="tree-container">
+            <div class="tree-node">
+                <div class="node-content root">أَقْسَامُ السُّنَّةِ الْمُؤَكَّدَةِ<br>(মুয়াক্কাদার প্রকারভেদ)</div>
+                <div class="tree-children">
+                    <div class="tree-node">
+                        <div class="node-content">مُؤَكَّدَةٌ عَلَى الْعَيْنِ<br>(ব্যক্তিগতভাবে সুন্নাহ)</div>
+                    </div>
+                    <div class="tree-node">
+                        <div class="node-content">مُؤَكَّدَةٌ عَلَى الْكِفَايَةِ<br>(সামষ্টিকভাবে সুন্নাহ)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="term-box">
+             <div class="term-title">১. মুয়াক্কাদা 'আলাল 'আইন (مُؤَكَّدَةٌ عَلَى الْعَيْنِ)</div>
+             <p>যা প্রত্যেক ব্যক্তির ওপর পৃথকভাবে সুন্নাহ হিসেবে সাব্যস্ত। যেমন:</p>
+             <ul>
+                 <li>পাঁচ ওয়াক্ত সালাত জামাতে আদায় করা।</li>
+                 <li>তারাবির সালাত।</li>
+             </ul>
+        </div>
+
+        <div class="term-box">
+             <div class="term-title">২. মুয়াক্কাদা 'আলাল কিফায়াহ (مُؤَكَّدَةٌ عَلَى الْكِفَايَةِ)</div>
+             <p>যা সামষ্টিকভাবে আদায় করা সুন্নাহ। যদি এলাকার বা দলের কিছু লোক তা আদায় করে, তবে সবার পক্ষ থেকে আদায় হয়ে যায়। কিন্তু কেউ না করলে সবাই দায়ী থাকে। যেমন:</p>
+             <ul>
+                 <li>রমজানের শেষ দশকে ইতিকাফ করা।</li>
+                 <li>জামাতের জন্য আজান ও ইকামাত।</li>
+             </ul>
+        </div>
+    </section>
+
+    <!-- PAGE 27: Proofs of Sunnah -->
+    <section id="section-sunnah-proofs">
+        <div class="section-header">
+            <h2>সুন্নাহ সাব্যস্ত হওয়ার মাধ্যম</h2>
+            <span class="page-tag">📄 Page 27</span>
+        </div>
+
+        <p>কোনো কাজ সুন্নাহ হিসেবে সাব্যস্ত হওয়ার জন্য দুটি পদ্ধতি রয়েছে:</p>
+
+        <div class="sanad-container">
+            <div class="sanad-node">
+                <strong>(ক) বাচনিক (Qawl):</strong><br>
+                নবীজি ﷺ এর সরাসরি উক্তি বা নির্দেশ, যা ওয়াজিবের ইঙ্গিত দেয় না।
+            </div>
+            <div class="sanad-arrow">↓</div>
+            <div class="sanad-node">
+                <strong>(খ) কর্মগত (Fi'l):</strong><br>
+                নবীজি ﷺ এর নিয়মিত আমল (Muwazabah)।
+            </div>
+            <div class="sanad-arrow">↓</div>
+            <div class="sanad-node">
+                <strong>শর্ত:</strong><br>
+                নিয়মিত আমল + কোনো ওজর ছাড়াই মাঝেমধ্যে ত্যাগ করা <br>
+                (যা প্রমাণ করে এটি ফরজ নয়)।
+            </div>
+        </div>
+
+        <div class="hukm-box">
+            <div class="hukm-heading">তাকিদ ও নিয়মিত আমল (مُواظَبَة)</div>
+            <p>যদি নবীজি ﷺ কোনো কাজ নিয়মিত করেন এবং তা ত্যাগের ওপর কোনো নিন্দা না করেন, তবে তা <span class="word arabic" data-meaning="মুস্তাহাব">مُسْتَحَبّ</span>। আর যদি ত্যাগের ওপর নিন্দা বা ধমক (কিন্তু শাস্তি নয়) থাকে, তবে তা <span class="word arabic" data-meaning="সুন্নাহ মুয়াক্কাদা">سُنَّةٌ مُؤَكَّدَةٌ</span>।</p>
+        </div>
+    </section>
+
+</div>
+
+<script>
+    // 1. Tooltip Logic
+    document.querySelectorAll('.word').forEach(word => {
+        const meaning = word.getAttribute('data-meaning');
+        
+        word.addEventListener('mouseenter', () => {
+            let tooltip = document.createElement('div');
+            tooltip.className = 'js-tooltip';
+            tooltip.innerText = meaning;
+            tooltip.style.position = 'absolute';
+            tooltip.style.background = '#333';
+            tooltip.style.color = '#fff';
+            tooltip.style.padding = '5px 10px';
+            tooltip.style.borderRadius = '4px';
+            tooltip.style.fontSize = '0.8rem';
+            tooltip.style.bottom = '100%';
+            tooltip.style.left = '50%';
+            tooltip.style.transform = 'translateX(-50%)';
+            tooltip.style.whiteSpace = 'nowrap';
+            tooltip.style.zIndex = '100';
+            tooltip.style.pointerEvents = 'none';
+            tooltip.style.marginBottom = '5px';
+            word.appendChild(tooltip);
+        });
+
+        word.addEventListener('mouseleave', () => {
+            const tooltip = word.querySelector('.js-tooltip');
+            if(tooltip) tooltip.remove();
+        });
+    });
+
+    // 2. Navigation Menu Builder
+    function buildMenu() {
+        const menu = document.getElementById('nav-menu');
+        menu.innerHTML = '';
+        document.querySelectorAll('section').forEach(sec => {
+            const title = sec.querySelector('h2').innerText;
+            const link = document.createElement('a');
+            link.className = 'dropdown-item';
+            link.href = '#' + sec.id;
+            link.innerText = title;
+            link.onclick = () => {
+                document.getElementById('nav-menu').classList.remove('active');
+            };
+            menu.appendChild(link);
+        });
+    }
+
+    function toggleMenu() {
+        document.getElementById('nav-menu').classList.toggle('active');
+    }
+
+    // Initialize Menu
+    buildMenu();
+
+    // 3. Live Search System
+    const searchInput = document.getElementById('search-input');
+    const contentDiv = document.getElementById('main-content');
+
+    searchInput.addEventListener('input', function(e) {
+        const term = e.target.value.toLowerCase();
+        
+        // Remove previous highlights
+        document.querySelectorAll('.highlight-match').forEach(span => {
+            const text = document.createTextNode(span.innerText);
+            span.parentNode.replaceChild(text, span);
+        });
+        
+        contentDiv.normalize();
+
+        if (term.length < 2) return;
+
+        const walker = document.createTreeWalker(contentDiv, NodeFilter.SHOW_TEXT, null, false);
+        const nodes = [];
+        
+        while(walker.nextNode()) nodes.push(walker.currentNode);
+
+        nodes.forEach(node => {
+            if (node.parentElement.tagName === 'SCRIPT' || node.parentElement.tagName === 'STYLE') return;
+            
+            const text = node.nodeValue;
+            const index = text.toLowerCase().indexOf(term);
+            
+            if (index !== -1) {
+                const range = document.createRange();
+                range.setStart(node, index);
+                range.setEnd(node, index + term.length);
+                
+                const span = document.createElement('span');
+                span.className = 'highlight-match';
+                range.surroundContents(span);
+            }
+        });
+    });
+
+    // 4. Add Section Feature
+    document.getElementById('add-section-btn').addEventListener('click', () => {
+        const title = prompt("Enter Section Title:");
+        if (!title) return;
+        
+        const content = prompt("Enter Section Content (HTML allowed):");
+        if (!content) return;
+
+        const newId = 'custom-section-' + Date.now();
+        const sectionHtml = `
+            <section id="${newId}">
+                <div class="section-header">
+                    <h2>${title}</h2>
+                    <span class="page-tag">Custom Added</span>
+                </div>
+                <div>${content}</div>
+            </section>
+        `;
+        
+        contentDiv.insertAdjacentHTML('beforeend', sectionHtml);
+        buildMenu();
+        
+        document.getElementById(newId).scrollIntoView({ behavior: 'smooth' });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.menu-container')) {
+            document.getElementById('nav-menu').classList.remove('active');
+        }
+    });
+
+</script>
+
+</body>
+</html>
